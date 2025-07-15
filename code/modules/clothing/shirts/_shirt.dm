@@ -7,6 +7,7 @@
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
 	sleevetype = "shirt"
 	boobed = TRUE
+	flags_inv = HIDEBOOB
 
 	slot_flags = ITEM_SLOT_SHIRT
 	body_parts_covered = CHEST|VITALS

@@ -8,6 +8,7 @@
 	sleevetype = "leg"
 
 	body_parts_covered = GROIN|LEGS
+	flags_inv = HIDECROTCH
 	resistance_flags = FLAMMABLE
 	max_integrity = INTEGRITY_WORST
 	prevent_crits = list(BCLASS_LASHING)

@@ -3,6 +3,7 @@
 	name = "bar dress"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
+	flags_inv = HIDEBOOB
 	icon_state = "dress"
 	item_state = "dress"
 	r_sleeve_status = SLEEVE_NORMAL

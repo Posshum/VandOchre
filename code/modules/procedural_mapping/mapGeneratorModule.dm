@@ -39,7 +39,7 @@
 	var/clustering = 0
 	var/skipLoopIteration = FALSE
 
-	if(excluded_turfs[T.type])
+	if(excluded_turfs.len && excluded_turfs[T.type])
 		return
 
 	if(allowed_turfs.len && !allowed_turfs[T.type])

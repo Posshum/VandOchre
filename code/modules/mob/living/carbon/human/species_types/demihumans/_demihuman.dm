@@ -38,7 +38,7 @@
 	allowed_pronouns = PRONOUNS_LIST
 	skin_tone_wording = "Ancestry"
 	default_color = "FFFFFF"
-	species_traits = list(MUTCOLOR, EYECOLOR, HAIR ,FACEHAIR, LIPS, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR ,FACEHAIR, LIPS, STUBBLE, OLDGREY)
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = FALSE
 	possible_ages = NORMAL_AGES_LIST_CHILD
@@ -123,7 +123,6 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/belly/human,
-		/datum/customizer/organ/butt/human,
 		/datum/customizer/organ/vagina/human_anthro,
 	)
 

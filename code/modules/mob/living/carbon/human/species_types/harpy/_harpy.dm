@@ -105,6 +105,12 @@
 		/datum/customizer/bodypart_feature/face_detail,
 		/datum/customizer/organ/tail/harpy,
 		/datum/customizer/organ/wings/harpy,
+		/datum/customizer/organ/testicles/anthro,
+		/datum/customizer/organ/penis/anthro,
+		/datum/customizer/organ/breasts/human,
+		/datum/customizer/organ/belly/human,
+		/datum/customizer/organ/butt/human,
+		/datum/customizer/organ/vagina/human_anthro,
 	)
 
 	descriptor_choices = list(

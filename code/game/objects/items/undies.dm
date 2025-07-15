@@ -13,6 +13,10 @@
 	var/gendered = MALE
 	var/race
 	var/cached_undies
+	var/covers_breasts = FALSE
+
+	///Whether this underwear covers the rear. If it doesn't, genital information may still be shown in certain circumstances
+	var/covers_rear = TRUE
 
 /obj/item/undies/f
 	name = "women's smallclothes"
@@ -33,3 +37,23 @@
 				H.underwear_color = color
 				H.update_body()
 				qdel(src)
+
+/obj/item/undies/bikini
+	name = "bikini"
+	icon_state = "bikini"
+	covers_breasts = TRUE
+
+/obj/item/undies/panties
+	name = "panties"
+	icon_state = "panties"
+
+/obj/item/undies/leotard
+	name = "leotard"
+	icon_state = "leotard"
+	covers_breasts = TRUE
+
+/obj/item/undies/loincloth
+	name = "loincloth"
+	icon_state = "loincloth"
+	covers_rear = FALSE
+	desc = "An absolute necessity. Slightly less effective."

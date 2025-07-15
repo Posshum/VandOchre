@@ -562,3 +562,14 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	prefs.save_preferences()
 
 #undef TOGGLE_CHECKBOX
+
+/client/verb/toggle_ERP() // Alters if other people can use the ERP panel ON you.
+	set category = "Options"
+	set name = "Toggle ERP Panel"
+	if(prefs)
+		prefs.sexable = !prefs.sexable
+		prefs.save_preferences()
+		if(prefs.sexable)
+			to_chat(src, "Others can play with you.")
+		else
+			to_chat(src, "Others can't touch you.")

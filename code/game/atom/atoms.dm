@@ -1359,3 +1359,30 @@
 			if(!start.CanAtmosPass(adj))
 				continue
 			_propagate_turf_heat(source, adj, key, next_value, next_weight, falloff, max_depth, depth + 1, seen)
+
+/**
+* Automatically turns on nearby walls. Qdels() if no walls are found.
+*/
+/atom/proc/auto_turn_destructive()
+	var/turf/closed/T = null
+	var/gotdir = 0
+	var/list/dir_list = list()
+	for(var/i = 1, i <= 8; i += i)
+		T = get_ranged_target_turf(src, i, 1)
+
+		if(istype(T))
+			//If someone knows a better way to do this, let me know. -Giacom
+			switch(i)
+				if(NORTH)
+					dir_list += NORTH
+				if(SOUTH)
+					dir_list += SOUTH
+				if(WEST)
+					dir_list += WEST
+				if(EAST)
+					dir_list += EAST
+			gotdir = dir
+	if(!gotdir || dir_list.len == 0)
+		qdel(src)
+	else
+		src.dir = pick(dir_list) //Random directions are fun :)

@@ -51,6 +51,7 @@
 	owner.put_in_hands(heart)
 
 	cast_on.add_splatter_floor()
+	cast_on.add_splatter_wall(force = 100, spill_amount = 3)
 	cast_on.adjustBruteLoss(20)
 
 	owner.visible_message(span_warning("[owner] rips [cast_on]'s heart out with a roar!"), \

@@ -216,6 +216,9 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	/// If the user clicked "Don't ask again" on the randomize character prompt
 	var/randomize_shutup = FALSE
 
+	//If the user can be fucked or not.
+	var/sexable = FALSE
+
 /datum/preferences/New(client/C)
 	parent = C
 

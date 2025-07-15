@@ -2622,3 +2622,15 @@
 	purge_all_skills(silent)
 	remove_spells(silent = silent)
 	purge_all_spellpoints(silent)
+
+/mob/living/proc/has_penis()
+	return gender == MALE
+
+/mob/living/proc/has_testicles()
+	return gender == MALE
+
+/mob/living/proc/has_vagina()
+	return gender == FEMALE
+
+/mob/living/proc/has_breasts()
+	return gender == FEMALE

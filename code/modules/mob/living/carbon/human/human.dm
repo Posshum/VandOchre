@@ -35,7 +35,7 @@
 					held_item.melee_attack_chain(user, src, params)
 
 /mob/living/carbon/human/Initialize()
-	// verbs += /mob/living/proc/mob_sleep
+	sexcon = new /datum/sex_controller(src)
 	verbs += /mob/living/proc/lay_down
 
 	//initialize limbs first
@@ -56,6 +56,7 @@
 		AddComponent(/datum/component/mood)
 	AddComponent(/datum/component/personal_crafting)
 	AddElement(/datum/element/footstep, footstep_type, 1, -6)
+	AddComponent(/datum/component/movedirtying, GLOB.filthy_types)
 	GLOB.human_list += src
 	if(ai_controller && flee_in_pain)
 		AddElement(/datum/element/ai_flee_while_in_pain)
@@ -795,3 +796,31 @@
 		bloody_hands = 0
 		update_inv_gloves()
 		. = TRUE
+
+//Vrell - Moving this here to fix load order bugs
+/mob/living/carbon/human/has_penis()
+	return getorganslot(ORGAN_SLOT_PENIS)
+
+/mob/living/carbon/human/has_testicles()
+	return getorganslot(ORGAN_SLOT_TESTICLES)
+
+/mob/living/carbon/human/has_vagina()
+	return getorganslot(ORGAN_SLOT_VAGINA)
+
+/mob/living/carbon/human/has_breasts()
+	RETURN_TYPE(/obj/item/organ/breasts)
+	return getorganslot(ORGAN_SLOT_BREASTS)
+
+/mob/living/carbon/human/proc/has_belly()
+	return getorganslot(ORGAN_SLOT_BELLY)
+
+/mob/living/carbon/human/proc/has_butt()
+	return getorganslot(ORGAN_SLOT_BUTT)
+
+/mob/living/carbon/human/proc/is_fertile()
+	var/obj/item/organ/vagina/vagina = getorganslot(ORGAN_SLOT_VAGINA)
+	return vagina.fertility
+
+/mob/living/carbon/human/proc/is_virile()
+	var/obj/item/organ/testicles/testicles = getorganslot(ORGAN_SLOT_TESTICLES)
+	return testicles.virility

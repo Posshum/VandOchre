@@ -234,3 +234,41 @@
 
 /obj/effect/decal/cleanable/debris/wood/weather_act_on(weather_trait, severity)
 	qdel(src)
+
+//The default filth object used with the movedirtying component. New filth should be under this.
+/obj/effect/decal/cleanable/filth
+	name = "filth"
+	desc = ""
+	icon_state = "floorgrime1"
+	icon = 'icons/effects/floorgrime.dmi'
+	canSmoothWith = list(/obj/effect/decal/cleanable/dirt, /turf/closed/wall, /obj/structure/falsewall, /turf/open/floor)
+	smooth = SMOOTH_TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	beauty = -75
+
+	//Used for increasing the filth rating and thus turning dirt1 -> dirt2 etc.
+	var/filth_rating = 0
+
+/obj/effect/decal/cleanable/filth/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	smooth = SMOOTH_TRUE
+	queue_smooth(src)
+	queue_smooth_neighbors(src)
+
+GLOBAL_LIST_INIT(filthy_types, list(
+		/obj/effect/decal/cleanable/filth/dirt1,
+		/obj/effect/decal/cleanable/filth/dirt2,
+		/obj/effect/decal/cleanable/filth/dirt3))
+
+/obj/effect/decal/cleanable/filth/dirt1
+	filth_rating = 1
+	icon_state = "floorgrime1"
+
+/obj/effect/decal/cleanable/filth/dirt2
+	filth_rating = 2
+	icon_state = "floorgrime2"
+
+/obj/effect/decal/cleanable/filth/dirt3
+	filth_rating = 3
+	icon_state = "floorgrime3"

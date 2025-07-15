@@ -1,6 +1,7 @@
 
 GLOBAL_LIST_INIT(character_flaws, list(
 	"Alcoholic"=/datum/charflaw/addiction/alcoholic,
+	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
 	"Devout Follower"=/datum/charflaw/addiction/godfearing,
 	"Pacifist"=/datum/charflaw/pacifist,
 	"Smoker"=/datum/charflaw/addiction/smoker,
@@ -757,3 +758,10 @@ GLOBAL_LIST_INIT(character_flaws, list(
 						to_chat(H, span_warning("The weight of your equipment aggravates your chronic back pain!"))
 					BP.lingering_pain += pain_amount
 					break
+
+//Handled under the sexcon.dm, just adds stress events otherwise.
+/datum/charflaw/addiction/lovefiend
+	name = "Nymphomaniac"
+	desc = "I must make love!"
+	time = 45 MINUTES
+	needsate_text = "I'm feeling randy."

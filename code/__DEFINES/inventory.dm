@@ -79,14 +79,16 @@
 #define HIDENECK (1<<10)
 #define HIDEBOOB (1<<11)
 #define HIDEBELT (1<<12)
-#define HIDETAIL (1<<13)
+#define HIDECROTCH	(1<<13)
+#define HIDETAIL (1<<14)
+#define HIDEBUTT (1<<15)
 // Some clothing have bras, etc of their own and look wrong overlayed over the default underwear
 // Such as the amazonian chainkini
 // Younglings will always override this don't worry
 /// Don't show default underwear bras when wearing this (Female only)
-#define HIDEUNDIESTOP (1<<14)
+#define HIDEUNDIESTOP (1<<16)
 /// Don't show default underwear bottoms when wearing this
-#define HIDEUNDIESBOT (1<<15)
+#define HIDEUNDIESBOT (1<<17)
 /// Don't show either
 #define HIDEUNDIES (HIDEUNDIESTOP | HIDEUNDIESBOT)
 

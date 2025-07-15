@@ -303,6 +303,7 @@
 #define OFFSET_SHIRT "wear_shirt"
 #define OFFSET_ARMOR "wear_armor"
 #define OFFSET_UNDIES "underwear"
+#define OFFSET_BUTT "butt"
 
 #define HUNGER_FACTOR		0.15	//factor at which mob nutrition decreases
 #define ETHEREAL_CHARGE_FACTOR	0.12 //factor at which ethereal's charge decreases

@@ -123,6 +123,8 @@
 
 	var/datum/riding/riding_datum
 
+	var/datum/sex_controller/sexcon
+
 	var/datum/language/selected_default_language
 
 	var/last_words	//used for database logging

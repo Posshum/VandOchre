@@ -84,6 +84,7 @@
 			heart.forceMove(H.drop_location())
 
 			H.add_splatter_floor()
+			H.add_splatter_wall(force = force)
 			H.adjustBruteLoss(20)
 			to_chat(user, span_notice("I finish pulling the heart from [H]!"))
 
@@ -163,6 +164,7 @@
 		GLOB.vanderlin_round_stats[STATS_LUX_HARVESTED]++
 
 		H.add_splatter_floor()
+		H.add_splatter_wall(force = force)
 		H.adjustBruteLoss(20)
 		visible_message(user, span_notice("Neant's blade draws the lux from [target]!"))
 

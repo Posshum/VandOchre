@@ -88,6 +88,8 @@
 	var/turf/location = C.loc
 	if(istype(location))
 		C.add_splatter_floor(location)
+		C.add_splatter_wall(user, location, force = 2, spill_amount = 3) //Garunteed at least 2 tile distance of blood spattering on the walls, and up to 3 walls to splat.
+
 	var/direction = pick(GLOB.cardinals)
 	var/t_range = rand(2,max(throw_range/2, 2))
 	var/turf/target_turf = get_turf(src)
@@ -115,6 +117,8 @@
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)
 	C.add_splatter_floor(T)
+	C.add_splatter_wall(user, force = 2, spill_amount = 3) //Garunteed at least 2 tile distance of blood spattering on the walls, and up to 3 walls to splat.
+
 	playsound(C, 'sound/combat/crit2.ogg', 100, FALSE, 5)
 	C.emote("painscream")
 	for(var/X in C.internal_organs)

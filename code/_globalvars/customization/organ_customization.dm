@@ -1,3 +1,56 @@
+GLOBAL_LIST_INIT(named_penis_sizes, list(
+	"Small" = 1,
+	"Average" = 2,
+	"Large" = 3,
+	"massive" = 4,
+	"enormous" = 5,
+))
+
+GLOBAL_LIST_INIT(named_ball_sizes, list(
+	"small" = 1,
+	"average" = 2,
+	"large" = 3,
+	"massive" = 4,
+	"enormous" = 5,
+	"gigantic" = 6,
+))
+
+GLOBAL_LIST_INIT(named_breast_sizes, list(
+	"Flat" = 0,
+	"Very small" = 1,
+	"small" = 2,
+	"normal" = 3,
+	"large" = 4,
+	"enormous" = 5,
+	"towering" = 6,
+	"gigantic" = 7,
+	"gargantuan" = 8,
+	"colossal" = 9,
+	"ungodly big" = 10,
+))
+
+GLOBAL_LIST_INIT(named_belly_sizes, list(
+	"flat" = 0,
+	"small" = 1,
+	"medium" = 2,
+	"large" = 3,
+	"enormous" = 5,
+	"towering" = 6,
+	"gigantic" = 7,
+	"gargantuan" = 8,
+	"colossal" = 9,
+	"ungodly big" = 10,
+))
+
+GLOBAL_LIST_INIT(named_butt_sizes, list(
+	"flat" = 0,
+	"small" = 1,
+	"medium" = 2,
+	"large" = 3,
+	"massive" = 4,
+	"enormous" = 5,
+))
+
 GLOBAL_LIST_INIT(customizer_choices, build_customizer_choices())
 GLOBAL_LIST_INIT(customizers, build_customizers())
 
@@ -31,3 +84,4 @@ GLOBAL_LIST_INIT(customizers, build_customizers())
 		to_chat(user, "<span class='warning'>The picked color is too bright!</span>")
 		return
 	return color
+

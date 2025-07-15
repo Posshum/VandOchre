@@ -583,6 +583,28 @@
 	if(!obscure_name && (flavortext || (headshot_link && src.client?.patreon?.has_access(ACCESS_ASSISTANT_RANK)))) // only show flavor text if there is a flavor text and we show headshot
 		. += "<a href='?src=[REF(src)];task=view_flavor_text;'>Examine Closer</a>"
 
+	// for underwears that don't cover from the rear, genital descriptions are still shown
+	if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN) && src.underwear)
+		//separate these conditions to not throw an error when no underwear is worn at all
+		if(user.InCone(src, turn(src.dir, 180)) && !src.underwear.covers_rear)
+			var/list/descriptors = list()
+			//only populate the descriptors for genitals you have
+			if(src.getorganslot(ORGAN_SLOT_PENIS))
+				descriptors += /datum/mob_descriptor/penis
+			if(src.getorganslot(ORGAN_SLOT_VAGINA))
+				descriptors += /datum/mob_descriptor/vagina
+			if(src.getorganslot(ORGAN_SLOT_TESTICLES))
+				descriptors += /datum/mob_descriptor/testicles
+			. += span_info("[t_his] underwear doesn't cover [t_his] from behind.")
+			//male genitalia line
+			var/malegen = build_coalesce_description(descriptors, src, list(MOB_DESCRIPTOR_SLOT_PENIS, MOB_DESCRIPTOR_SLOT_TESTICLES), "%THEY% %DESC1%, and %DESC2%.")
+			if(malegen)
+				. += span_info(malegen)
+			//female genitalia line
+			var/femgen = build_coalesce_description(descriptors, src, list(MOB_DESCRIPTOR_SLOT_VAGINA), "%THEY% %DESC1%.")
+			if(femgen)
+				. += span_info(femgen)
+
 	var/trait_exam = common_trait_examine()
 	if(!isnull(trait_exam))
 		. += trait_exam

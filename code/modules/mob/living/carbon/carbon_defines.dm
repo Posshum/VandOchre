@@ -28,6 +28,8 @@
 	var/obj/item/tank/internal = null
 	var/obj/item/clothing/head = null
 
+	var/obj/item/undies/underwear = null	//Underwear item
+
 
 	var/obj/item/clothing/gloves = null //only used by humans
 	var/obj/item/clothing/shoes = null //only used by humans.

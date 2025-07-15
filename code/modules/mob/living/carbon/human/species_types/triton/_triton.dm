@@ -33,9 +33,9 @@
 
 	skin_tone_wording = "Tribal Identity"
 	default_color = "9cc2e2"
-	use_skintones = TRUE
+	use_skintones = FALSE
 
-	species_traits = list(NO_UNDERWEAR, HAIR, OLDGREY)
+	species_traits = list(MUTCOLORS, NO_UNDERWEAR, HAIR, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_WATER_BREATHING, TRAIT_GOOD_SWIM)
 	inherent_traits_f = list(TRAIT_STRONGBITE)
 	inherent_skills = list(

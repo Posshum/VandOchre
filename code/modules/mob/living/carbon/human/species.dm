@@ -35,6 +35,8 @@ GLOBAL_LIST_EMPTY(patreon_races)
 	/// The list of voice types this species allows in the character sheet for masculine bodies
 	var/list/allowed_voicetypes_m = VOICE_TYPES_LIST
 
+	var/fixed_mut_color = "" //to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
+
 	/// Associative list of FEATURE SLOT to PIXEL ADJUSTMENTS X/Y seperated by gender
 	var/list/offset_features_m = list(
 		OFFSET_RING = list(0,0),\

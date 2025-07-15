@@ -29,9 +29,9 @@
 
 	skin_tone_wording = "Parent House"
 
-	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR,HAIR,FACEHAIR,LIPS,OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	use_skintones = 1
+	use_skintones = FALSE
 	disliked_food = NONE
 	liked_food = NONE
 	possible_ages = NORMAL_AGES_LIST_CHILD

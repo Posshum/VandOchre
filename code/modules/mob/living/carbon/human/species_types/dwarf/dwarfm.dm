@@ -29,10 +29,10 @@
 	skin_tone_wording = "Ore Attunement"
 
 	default_color = "FFFFFF"
-	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, YOUNGBEARD, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR, FACEHAIR, LIPS, YOUNGBEARD, STUBBLE, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
 	possible_ages = NORMAL_AGES_LIST
-	use_skintones = TRUE
+	use_skintones = FALSE
 
 	changesource_flags = WABBAJACK
 

@@ -404,7 +404,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	//-----------START OF BODY TABLE-----------
 	dat += "<table width='100%'><tr><td width='1%' valign='top'>"
 
-	var/use_skintones = pref_species.use_skintones
+/* 	var/use_skintones = pref_species.use_skintones
 	if(use_skintones)
 
 		//dat += APPEARANCE_CATEGORY_COLUMN
@@ -412,7 +412,11 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 		dat += "<b>[skin_tone_wording]: </b><a href='?_src_=prefs;preference=s_tone;task=input'>Change </a>"
 		//dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SKIN_TONE]'>[(randomise[RANDOM_SKIN_TONE]) ? "Lock" : "Unlock"]</A>"
-		dat += "<br>"
+		dat += "<br>" */
+
+	dat += "<b>Mutant Color #1:</b><span style='border: 1px solid #161616; background-color: #[features["mcolor"]];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color;task=input'>Change</a><BR>"
+	dat += "<b>Mutant Color #2:</b><span style='border: 1px solid #161616; background-color: #[features["mcolor2"]];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color2;task=input'>Change</a><BR>"
+	dat += "<b>Mutant Color #3:</b><span style='border: 1px solid #161616; background-color: #[features["mcolor3"]];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color3;task=input'>Change</a><BR>"
 
 	dat += "<br>"
 	dat += "<b>Voice Type:</b> <a href='?_src_=prefs;preference=voicetype;task=input'>[voice_type]</a>"
@@ -1203,6 +1207,25 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						if(charflaw.desc)
 							to_chat(user, "<span class='info'>[charflaw.desc]</span>")
 
+				if("mutant_color")
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #1 color:", "Character Preference","#"+features["mcolor"])
+					if(new_mutantcolor)
+
+						features["mcolor"] = sanitize_hexcolor(new_mutantcolor)
+						try_update_mutant_colors()
+
+				if("mutant_color2")
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #2 color:", "Character Preference","#"+features["mcolor2"])
+					if(new_mutantcolor)
+						features["mcolor2"] = sanitize_hexcolor(new_mutantcolor)
+						try_update_mutant_colors()
+
+				if("mutant_color3")
+					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #3 color:", "Character Preference","#"+features["mcolor3"])
+					if(new_mutantcolor)
+						features["mcolor3"] = sanitize_hexcolor(new_mutantcolor)
+						try_update_mutant_colors()
+
 				if("flavortext")
 					to_chat(user, "<span class='notice'>["<span class='bold'>Flavortext should not include nonphysical nonsensory attributes such as backstory or the character's internal thoughts. NSFW descriptions are prohibited.</span>"]</span>")
 					var/new_flavortext = input(user, "Input your character description:", "Flavortext", flavortext) as message|null
@@ -1781,3 +1804,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	return TRUE
 
+/datum/preferences/proc/try_update_mutant_colors()
+	if(update_mutant_colors)
+		reset_body_marking_colors()
+		reset_all_customizer_accessory_colors()

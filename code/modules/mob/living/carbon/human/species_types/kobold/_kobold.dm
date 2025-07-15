@@ -24,7 +24,7 @@
 	skin_tone_wording = "Scale Color"
 	default_color = "FFFFFF"
 
-	species_traits = list(NO_UNDERWEAR)
+	species_traits = list(MUTCOLORS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_TINY, TRAIT_DARKVISION)
 
 	specstats_m = list(STATKEY_STR = -4, STATKEY_PER = -2, STATKEY_INT = -2, STATKEY_CON = -4, STATKEY_END = 2, STATKEY_SPD = 2, STATKEY_LCK = 0)
@@ -33,7 +33,7 @@
 	allowed_pronouns = PRONOUNS_LIST_IT_ONLY
 
 	possible_ages = NORMAL_AGES_LIST
-	use_skintones = TRUE
+	use_skintones = FALSE
 
 	changesource_flags = WABBAJACK
 

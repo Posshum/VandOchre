@@ -38,9 +38,9 @@
 	allowed_pronouns = PRONOUNS_LIST
 	skin_tone_wording = "Ancestry"
 	default_color = "FFFFFF"
-	species_traits = list(EYECOLOR, HAIR ,FACEHAIR, LIPS, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLOR, EYECOLOR, HAIR ,FACEHAIR, LIPS, STUBBLE, OLDGREY)
 	default_features = MANDATORY_FEATURE_LIST
-	use_skintones = TRUE
+	use_skintones = FALSE
 	possible_ages = NORMAL_AGES_LIST_CHILD
 	disliked_food = NONE
 	liked_food = NONE

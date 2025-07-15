@@ -23,12 +23,12 @@
 	THIS IS A DISCRIMINATED SPECIES. EXPECT A MORE DIFFICULT EXPERIENCE. PLAY AT YOUR OWN RISK."
 
 	skin_tone_wording = "Tribal Identity"
-	use_skintones = TRUE
+	use_skintones = FALSE
 	default_color = "FFFFFF"
 
 	possible_ages = NORMAL_AGES_LIST_CHILD
 
-	species_traits = list(EYECOLOR, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_KITTEN_MOM)
 
 	specstats_m = list(STATKEY_STR = -2, STATKEY_PER = 2, STATKEY_INT = 0, STATKEY_CON = -2, STATKEY_END = 0, STATKEY_SPD = 2, STATKEY_LCK = 0)

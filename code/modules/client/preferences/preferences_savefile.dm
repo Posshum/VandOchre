@@ -277,6 +277,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["family"] >> family
 	S["setspouse"] >> setspouse
 	S["selected_accent"] >> selected_accent
+	S["feature_mcolor"]		>> features["mcolor"]
+	S["feature_mcolor2"]	>> features["mcolor2"]
+	S["feature_mcolor3"]	>> features["mcolor3"]
+	S["feature_ethcolor"]	>> features["ethcolor"]
 
 	// We load our list, but override everything to FALSE to stop a "tainted" save from making it random again.
 	randomise[RANDOM_BODY] = FALSE
@@ -313,6 +317,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	_load_appearence(S)
+
+	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
+		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
+	if(!S["features["mcolor2"]"] || S["features["mcolor2"]"] == "#000")
+		WRITE_FILE(S["features["mcolor2"]"]	, "#FFF")
+	if(!S["features["mcolor3"]"] || S["features["mcolor3"]"] == "#000")
+		WRITE_FILE(S["features["mcolor3"]"]	, "#FFF")
+
+	if(!S["feature_ethcolor"] || S["feature_ethcolor"] == "#000")
+		WRITE_FILE(S["feature_ethcolor"], "9c3030")
 
 	var/patron_typepath
 	S["selected_patron"] >> patron_typepath
@@ -360,6 +374,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		if(!custom_names[custom_name_id])
 			custom_names[custom_name_id] = get_default_name(custom_name_id)
 
+	if(!features["mcolor"] || features["mcolor"] == "#000")
+		features["mcolor"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
+	if(!features["mcolor2"] || features["mcolor2"] == "#000")
+		features["mcolor2"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
+	if(!features["mcolor3"] || features["mcolor3"] == "#000")
+		features["mcolor3"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
+
+	if(!features["ethcolor"] || features["ethcolor"] == "#000")
+		features["ethcolor"] = GLOB.color_list_ethereal[pick(GLOB.color_list_ethereal)]
+
 	randomise = SANITIZE_LIST(randomise)
 
 	age = sanitize_inlist(age, pref_species.possible_ages)
@@ -367,7 +391,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	voice_color = voice_color
 	pronouns = sanitize_text(pronouns, THEY_THEM)
 	voice_type = sanitize_text(voice_type, VOICE_TYPE_MASC)
-	skin_tone = skin_tone
+	features["mcolor"]	= sanitize_hexcolor(features["mcolor"], 6, 0)
+	features["mcolor2"]	= sanitize_hexcolor(features["mcolor2"], 6, 0)
+	features["mcolor3"]	= sanitize_hexcolor(features["mcolor3"], 6, 0)
+	features["ethcolor"]	= copytext(features["ethcolor"],1,7)
 	family = family
 	setspouse = setspouse
 	selected_accent ||= ACCENT_DEFAULT
@@ -429,6 +456,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["family"]			, 	family)
 	WRITE_FILE(S["setspouse"]			, 	setspouse)
 	WRITE_FILE(S["selected_accent"], selected_accent)
+	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
+	WRITE_FILE(S["feature_mcolor2"]					, features["mcolor2"])
+	WRITE_FILE(S["feature_mcolor3"]					, features["mcolor3"])
+	WRITE_FILE(S["feature_ethcolor"]					, features["ethcolor"])
 
 
 	//Custom names

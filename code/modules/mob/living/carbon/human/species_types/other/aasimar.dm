@@ -29,9 +29,9 @@
 
 	skin_tone_wording = "Craft"
 
-	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR, FACEHAIR, LIPS, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	use_skintones = TRUE
+	use_skintones = FALSE
 
 	possible_ages = list(AGE_IMMORTAL)
 	changesource_flags = WABBAJACK

@@ -36,9 +36,9 @@
 
 	exotic_bloodtype = /datum/blood_type/human/tiefling
 
-	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NOFIRE)
-	use_skintones = TRUE
+	use_skintones = FALSE
 
 	possible_ages = NORMAL_AGES_LIST_CHILD
 

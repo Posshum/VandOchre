@@ -23,7 +23,7 @@
 
 	skin_tone_wording = "Clan"
 
-	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NOSTINK)
 
 	allowed_voicetypes_m = VOICE_TYPES_MASCANDRO
@@ -33,7 +33,7 @@
 	// horcs are STINKY
 	components_to_add = list(/datum/component/rot/stinky_person)
 
-	use_skintones = 1
+	use_skintones = FALSE
 
 	possible_ages = NORMAL_AGES_LIST_CHILD
 	changesource_flags = WABBAJACK

@@ -53,6 +53,7 @@
 #define CLONER_MATURE_CLONE "mature"
 
 //species traits for mutantraces
+#define MUTCOLORS		1
 //#define HAIR			2 //This is redefined in a bitflag in inventory.dm
 #define FACEHAIR		3
 #define EYECOLOR		4
@@ -91,7 +92,8 @@
 #define G_FEMALE 2
 #define G_PLURAL 3
 
-#define MANDATORY_FEATURE_LIST list()
+#define MANDATORY_FEATURE_LIST list("mcolor" = "FFF", "mcolor2" = "FFF", "mcolor3" = "FFF", "ethcolor" = "9c3030")
+
 
 #define HAIR_COLOR_LIST list("#8f5a00", "#593800", "#362200", "#4e422e", "#8c8271", "#bfb7ab", "#31302e", "#f0dc48")
 #define EYE_COLOR_LIST list("#865900", "#06b400", "#312f27", "#008e83", "#002d8e", "#c16c00")

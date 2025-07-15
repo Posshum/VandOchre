@@ -19,9 +19,9 @@
 	skin_tone_wording = "Heritage"
 	default_color = "FFFFFF"
 
-	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
+	species_traits = list(MUTCOLORS, EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY)
 
-	use_skintones = TRUE
+	use_skintones = FALSE
 	possible_ages = NORMAL_AGES_LIST_CHILD
 	changesource_flags = WABBAJACK
 

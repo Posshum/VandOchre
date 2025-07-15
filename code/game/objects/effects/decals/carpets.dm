@@ -32,3 +32,10 @@
 	name = "carpet"
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "blackcarpet"
+
+/obj/effect/decal/trenchflooring
+	name = ""
+	desc = ""
+	//icon = 'icons/roguetown/rav/map_project/floors.dmi'
+	icon_state = "trench_flooring"
+	mouse_opacity = 0

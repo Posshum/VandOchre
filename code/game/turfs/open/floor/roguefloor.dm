@@ -295,6 +295,17 @@
 		color = null
 	return TRUE
 
+/turf/open/floor/dirt/mud
+	name = "mud"
+	desc = "The soil is sodden with the tears of the earth."
+	icon_state = "mud1"
+	muddy = TRUE
+	slowdown = 2
+	footstep = FOOTSTEP_MUD
+	barefootstep = FOOTSTEP_MUD
+	heavyfootstep = FOOTSTEP_MUD
+	bloodiness = 20
+
 /turf/open/floor/dirt/road/update_water()
 	water_level = max(water_level-10,0)
 	for(var/D in GLOB.cardinals)
@@ -892,6 +903,14 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/grassland.ogg'
+
+/turf/open/floor/hay
+	icon_state = "hay"
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/grassland.ogg'
+	slowdown = 0
 
 /*	..................  Platforms   ................... */
 /turf/open/floor/ruinedwood/platform

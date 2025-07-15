@@ -241,8 +241,6 @@
 	desc = ""
 	icon_state = "floorgrime1"
 	icon = 'icons/effects/floorgrime.dmi'
-	canSmoothWith = list(/obj/effect/decal/cleanable/dirt, /turf/closed/wall, /obj/structure/falsewall, /turf/open/floor)
-	smooth = SMOOTH_TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	beauty = -75
 
@@ -252,9 +250,6 @@
 /obj/effect/decal/cleanable/filth/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
-	smooth = SMOOTH_TRUE
-	queue_smooth(src)
-	queue_smooth_neighbors(src)
 
 GLOBAL_LIST_INIT(filthy_types, list(
 		/obj/effect/decal/cleanable/filth/dirt1,

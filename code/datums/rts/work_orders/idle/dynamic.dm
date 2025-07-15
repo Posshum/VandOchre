@@ -1,6 +1,9 @@
 /turf/open
 	var/explored_by_workers = FALSE
 
+	//Used to tell if a turf can be dirty or not. Like... Dirt cant get dirty.
+	var/can_be_dirty = TRUE
+
 /datum/idle_tendancies/dynamic/perform_idle(mob/camera/strategy_controller/master, mob/living/worker)
 	var/datum/worker_mind/mind = worker.controller_mind
 

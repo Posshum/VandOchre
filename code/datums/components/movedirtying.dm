@@ -69,8 +69,8 @@ var/nextfilthrating = 1 //Currently unused.
 		return
 
 	var/mob/living/LM = parent
-	if(T.can_be_dirty || LM.buckled || LM.lying || !CHECK_MULTIPLE_BITFIELDS(LM.mobility_flags, MOBILITY_STAND | MOBILITY_MOVE) || LM.throwing || LM.movement_type & (VENTCRAWLING | FLYING))
-		if(LM.lying && !LM.buckled && !(LM.movement_type & (VENTCRAWLING | FLYING))) 
+	if(T.can_be_dirty || LM.buckled || LM.body_position == LYING_DOWN || !CHECK_MULTIPLE_BITFIELDS(LM.mobility_flags, MOBILITY_STAND | MOBILITY_MOVE) || LM.throwing || LM.movement_type & (VENTCRAWLING | FLYING))
+		if(LM.body_position == LYING_DOWN && !LM.buckled && !(LM.movement_type & (VENTCRAWLING | FLYING)))
 			return //Crawling should have new/different sprites but they wont exist for a while.
 
 	if(iscarbon(LM))
@@ -107,9 +107,9 @@ var/nextfilthrating = 1 //Currently unused.
 			else
 				chosen_atom = filth_atom_list[1]
 				new chosen_atom(H.loc)
-	
+
 		//Future proofing barefooted filth stuff down the road for more immersive ground filth.
-		else 
+		else
 			if(get_filth_obj())
 				replace_filth()
 			else

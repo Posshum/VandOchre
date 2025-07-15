@@ -122,7 +122,7 @@
 		var/datum/job/job = SSjob.GetJob(target.job)
 		if(length(user.return_apprentices()) >= user.return_max_apprentices())
 			return
-		if((target.age == AGE_CHILD || job?.type == /datum/job/vagrant) && target.mind && !target.is_apprentice())
+		if((target.age == AGE_YOUNG_ADULT || job?.type == /datum/job/vagrant) && target.mind && !target.is_apprentice())
 			to_chat(user, span_notice("You offer apprenticeship to [target]."))
 			user.make_apprentice(target)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN

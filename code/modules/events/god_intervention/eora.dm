@@ -21,7 +21,7 @@
 			continue
 
 		// Exclude married and children
-		if(human_mob.IsWedded() || human_mob.age == AGE_CHILD)
+		if(human_mob.IsWedded() || human_mob.age == AGE_YOUNG_ADULT)
 			continue
 
 		// Exclude parents using new family system

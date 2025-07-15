@@ -25,9 +25,9 @@
 						use_female_sprites = FEMALE_SPRITES
 
 				if(use_female_sprites)
-					offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_f
+					offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_f
 				else
-					offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_m
+					offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_m
 
 			var/mutable_appearance/appearance = mutable_appearance(icon_path, overlay_name, overlay_layer)
 			if(LAZYACCESS(offsets, OFFSET_HEAD))

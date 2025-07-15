@@ -63,9 +63,9 @@
 
 	var/list/offsets
 	if(use_female_sprites)
-		offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_f
+		offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_f
 	else
-		offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_m
+		offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_m
 
 	if(LAZYACCESS(offsets, feature_key))
 		for(var/mutable_appearance/appearance as anything in appearance_list)

@@ -187,7 +187,7 @@ GLOBAL_LIST_INIT(RATS_DONT_EAT, typecacheof(list(
 	#define is_goblin_job(job_type) (istype(job_type, /datum/job/goblin))
 
 // Age Check
-	#define is_child(A) (A.age == AGE_CHILD)
+	#define is_child(A) (A.age == AGE_YOUNG_ADULT)
 // seemingly deprecated:
 //"Preacher" //as a job, there is an equivalent class
 

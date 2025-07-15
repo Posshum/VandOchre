@@ -80,7 +80,7 @@
 				set_stat_modifier("innate_sex", stat, specstat_list[stat])
 
 		switch(H.age)
-			if(AGE_CHILD)
+			if(AGE_YOUNG_ADULT)
 				set_stat_modifier("innate_age", STATKEY_STR, -2)
 				set_stat_modifier("innate_age", STATKEY_CON, -2)
 				set_stat_modifier("innate_age", STATKEY_PER, 1)

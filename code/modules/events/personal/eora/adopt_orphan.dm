@@ -23,13 +23,13 @@
 			continue
 		if(!H.patron || !istype(H.patron, /datum/patron/divine/eora))
 			continue
-		if(H.age == AGE_CHILD)
+		if(H.age == AGE_YOUNG_ADULT)
 			continue
 		recipient_found = TRUE
 		break
 
 	for(var/mob/living/carbon/human/child in GLOB.player_list)
-		if(child.age != AGE_CHILD || child.stat == DEAD || !child.client)
+		if(child.age != AGE_YOUNG_ADULT || child.stat == DEAD || !child.client)
 			continue
 		if(child.family_datum)
 			continue
@@ -50,12 +50,12 @@
 			continue
 		if(!H.patron || !istype(H.patron, /datum/patron/divine/eora))
 			continue
-		if(H.age == AGE_CHILD)
+		if(H.age == AGE_YOUNG_ADULT)
 			continue
 		valid_targets += H
 
 	for(var/mob/living/carbon/human/child in GLOB.player_list)
-		if(child.age != AGE_CHILD || child.stat == DEAD || !child.client)
+		if(child.age != AGE_YOUNG_ADULT || child.stat == DEAD || !child.client)
 			continue
 		if(child.family_datum)
 			continue

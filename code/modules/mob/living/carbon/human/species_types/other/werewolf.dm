@@ -13,7 +13,7 @@
 	gender = FEMALE
 
 /mob/living/carbon/human/species/werewolf/child
-	age = AGE_CHILD
+	age = AGE_YOUNG_ADULT
 
 /datum/species/werewolf
 	name = "werewolf"
@@ -63,7 +63,7 @@
 		H.icon_state = "wwolf_m"
 	if(H.gender == FEMALE)
 		H.icon_state = "wwolf_f"
-	if(H.age == AGE_CHILD)
+	if(H.age == AGE_YOUNG_ADULT)
 		H.icon_state = "wwolf_c"
 	H.update_damage_overlays()
 	return TRUE

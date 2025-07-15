@@ -1322,13 +1322,13 @@
 		var/mob/living/carbon/human/target_human = target
 		var/target_height = FALSE
 		if(istype(target_human))
-			if(target_human.age == AGE_CHILD)
+			if(target_human.age == AGE_YOUNG_ADULT)
 				target_height = TRUE
 
-		if((human.age == AGE_CHILD) && (!HAS_TRAIT(target, TRAIT_TINY) || !target_height))
+		if((human.age == AGE_YOUNG_ADULT) && (!HAS_TRAIT(target, TRAIT_TINY) || !target_height))
 			modifier -= 0.3
 
-		if(human.age != AGE_CHILD && (HAS_TRAIT(target, TRAIT_TINY) || target_height))
+		if(human.age != AGE_YOUNG_ADULT && (HAS_TRAIT(target, TRAIT_TINY) || target_height))
 			modifier += 0.5
 
 	// Environmental factors
@@ -1465,7 +1465,7 @@
 		attackhostage()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		if((HAS_TRAIT(H, TRAIT_NOSEGRAB) && !HAS_TRAIT(src, TRAIT_MISSING_NOSE)) || (HAS_TRAIT(H, TRAIT_EARGRAB) && age == AGE_CHILD))
+		if((HAS_TRAIT(H, TRAIT_NOSEGRAB) && !HAS_TRAIT(src, TRAIT_MISSING_NOSE)) || (HAS_TRAIT(H, TRAIT_EARGRAB) && age == AGE_YOUNG_ADULT))
 			var/obj/item/bodypart/head = get_bodypart(BODY_ZONE_HEAD)
 			for(var/obj/item/grabbing/G in grabbedby)
 				if(G.limb_grabbed == head)

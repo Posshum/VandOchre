@@ -16,8 +16,19 @@ GLOBAL_LIST_EMPTY(patreon_races)
 	var/limbs_icon_f
 	/// if alien colors are disabled, this is the color that will be used by that race
 	var/default_color = "#FFF"
+
+/*
+*		Noting now in case of any future issues: The "AGE_CHILD" flag has be changed to the "AGE_YOUNG_ADULT", Young Adults are 18+.
+*			If there is any issues within the code that was missed, it is not intentional, and will be fixed as soon as humanly possible.
+*					This notice is left here to be referred to by coders and players in regards to mislabeled text.
+*								No minors are allowed on Ochre, not fantasy, and especially not real.
+*
+*						A reminder that if you suspect anyone to be a minor, report them immediately to staff.
+*/
+
 	/// List of ages that can be selected in prefs for this species
 	var/list/possible_ages = ALL_AGES_LIST_CHILD
+
 	/// Whether or not this species has sexual characteristics
 	var/sexes = TRUE
 	/// Whether this species a requires patreon subscription to access
@@ -768,9 +779,9 @@ GLOBAL_LIST_EMPTY(patreon_races)
 			if(H.gender == FEMALE && !species.swap_female_clothes || H.gender == MALE && species.swap_male_clothes)
 				use_female_sprites = FEMALE_BOOB
 		if(use_female_sprites)
-			offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_f
+			offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_f
 		else
-			offsets = (H.age == AGE_CHILD) ? species.offset_features_child : species.offset_features_m
+			offsets = (H.age == AGE_YOUNG_ADULT) ? species.offset_features_child : species.offset_features_m
 
 	var/list/standing = list()
 
@@ -820,7 +831,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 			hide_bottom = H.wear_pants.flags_inv & HIDEUNDIESBOT
 
 		if(H.underwear)
-			if(H.age == AGE_CHILD)
+			if(H.age == AGE_YOUNG_ADULT)
 				hide_top = FALSE
 				hide_bottom = FALSE
 

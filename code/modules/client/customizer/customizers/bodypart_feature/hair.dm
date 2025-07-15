@@ -330,7 +330,7 @@
 
 /datum/customizer/bodypart_feature/hair/facial/is_allowed(datum/preferences/prefs)
 	var/datum/species/species = return_species(prefs)
-	if(prefs.age == AGE_CHILD && !(YOUNGBEARD in species.species_traits))
+	if(prefs.age == AGE_YOUNG_ADULT && !(YOUNGBEARD in species.species_traits))
 		return FALSE
 	return (prefs.gender == MALE) || istype(species, /datum/species/dwarf)
 

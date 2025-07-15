@@ -1394,7 +1394,7 @@ SUBSYSTEM_DEF(gamemode)
 				else
 					GLOB.vanderlin_round_stats[STATS_OTHER_GENDER]++
 			switch(human_mob.age)
-				if(AGE_CHILD)
+				if(AGE_YOUNG_ADULT)
 					GLOB.vanderlin_round_stats[STATS_CHILD_POPULATION]++
 				if(AGE_ADULT)
 					GLOB.vanderlin_round_stats[STATS_ADULT_POPULATION]++

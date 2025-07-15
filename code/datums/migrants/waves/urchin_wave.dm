@@ -4,7 +4,7 @@
 	Preform stick-ups, lurk in the alleys, and make sure your siblings don't invoke the ire of the Matron. She doesn't \
 	deserve the headache you give her."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_CHILD)
+	allowed_ages = list(AGE_YOUNG_ADULT)
 	grant_lit_torch = TRUE
 	is_foreigner = FALSE
 	outfit = /datum/outfit/job/urchinbrain

@@ -191,7 +191,7 @@
 	var/boon = 1 // Can't teach an old dog new tricks. Most old jobs start with higher skill too.
 	if(H.age == AGE_OLD)
 		boon = 0.8
-	else if(H.age == AGE_CHILD)
+	else if(H.age == AGE_YOUNG_ADULT)
 		boon = 1.1
 	boon += get_skill_level(skill) / 10
 	if(HAS_TRAIT(H, TRAIT_TUTELAGE)) //5% boost for being a good teacher

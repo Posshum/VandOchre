@@ -643,9 +643,9 @@
 
 		// anti pedophile logging
 		var/log_msg
-		if(E.age == AGE_CHILD)
+		if(E.age == AGE_YOUNG_ADULT)
 			log_msg = "[key_name(H)][ADMIN_FLW(H)] kissed [key_name(E)] [ADMIN_FLW(E)], a CHILD!"
-			if(H.age == AGE_CHILD)
+			if(H.age == AGE_YOUNG_ADULT)
 				log_msg += " As a child."
 			else
 				log_msg += " As an adult."
@@ -931,9 +931,9 @@
 		if(H.zone_selected == BODY_ZONE_PRECISE_GROIN)
 		// anti pedophile logging
 			var/log_msg
-			if(E.age == AGE_CHILD)
+			if(E.age == AGE_YOUNG_ADULT)
 				log_msg = "[key_name(H)][ADMIN_FLW(H)] slapped [key_name(E)][ADMIN_FLW(E)] on the ass, a CHILD!"
-				if(H.age == AGE_CHILD)
+				if(H.age == AGE_YOUNG_ADULT)
 					log_msg += " As a child."
 				else
 					log_msg += " As an adult."

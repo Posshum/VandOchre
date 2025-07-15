@@ -21,7 +21,7 @@
 			continue
 		if(!H.patron || !istype(H.patron, /datum/patron/divine/ravox))
 			continue
-		if(H.age == AGE_CHILD)
+		if(H.age == AGE_YOUNG_ADULT)
 			continue
 	return FALSE
 
@@ -33,7 +33,7 @@
 			continue
 		if(!human_mob.patron || !istype(human_mob.patron, /datum/patron/divine/ravox))
 			continue
-		if(human_mob.age == AGE_CHILD)
+		if(human_mob.age == AGE_YOUNG_ADULT)
 			continue
 
 	if(!length(valid_targets))

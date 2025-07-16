@@ -32,7 +32,7 @@
 			return "000"
 
 /proc/random_underwear(gender)
-	if(!GLOB.underwear_list.len)
+/* 	if(!GLOB.underwear_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
 	switch(gender)
 		if(MALE)
@@ -40,7 +40,7 @@
 		if(FEMALE)
 			return pick(GLOB.underwear_f)
 		else
-			return pick(GLOB.underwear_list)
+			return pick(GLOB.underwear_list) */
 
 /proc/random_undershirt(gender)
 	if(!GLOB.undershirt_list.len)

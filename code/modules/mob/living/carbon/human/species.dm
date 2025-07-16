@@ -431,7 +431,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 	return " [pick(possible_surnames)]"
 
 /datum/species/proc/get_spec_undies_list(gender)
-	if(!GLOB.underwear_list.len)
+/* 	if(!GLOB.underwear_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
 	var/list/spec_undies = list()
 	var/datum/sprite_accessory/X
@@ -450,13 +450,13 @@ GLOBAL_LIST_EMPTY(patreon_races)
 					if(id in X.specuse)
 						if(X.roundstart)
 							spec_undies += X
-	return spec_undies
+	return spec_undies */
 
 /datum/species/proc/random_underwear(gender)
-	var/list/spec_undies = get_spec_undies_list(gender)
+/* 	var/list/spec_undies = get_spec_undies_list(gender)
 	if(LAZYLEN(spec_undies))
 		var/datum/sprite_accessory/underwear = pick(spec_undies)
-		return underwear.name
+		return underwear.name */
 
 /datum/species/proc/regenerate_icons(mob/living/carbon/human/H)
 	return FALSE
@@ -809,7 +809,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 			standing += bodyhair_overlay
 
 	//Underwear
-	if(!(NO_UNDERWEAR in species_traits))
+/* 	if(!(NO_UNDERWEAR in species_traits))
 		var/hide_top = FALSE
 		var/hide_bottom = FALSE
 		var/obj/item/clothing/w_armor = H.wear_armor
@@ -838,9 +838,9 @@ GLOBAL_LIST_EMPTY(patreon_races)
 				if(H.gender == FEMALE)
 					H.underwear = "FemYoungling"
 				else
-					H.underwear = "Youngling"
+					H.underwear = "Youngling" */
 
-			var/datum/sprite_accessory/underwear/underwear = GLOB.underwear_list[H.underwear]
+/* /* 			var/datum/sprite_accessory/underwear/underwear = GLOB.underwear_list[H.underwear] */
 
 			if(underwear)
 				var/mutable_appearance/underwear_overlay
@@ -868,7 +868,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 						else
 							H.underwear_color = "#755f46"
 							underwear_overlay.color = "#755f46"
-					standing += underwear_overlay
+					standing += underwear_overlay */
 
 	if(length(standing))
 		H.overlays_standing[BODY_LAYER] = standing

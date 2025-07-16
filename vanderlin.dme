@@ -2875,4 +2875,7 @@
 #include "interface\skin.dmf"
 #include "code\modules\client\customizer\customizers\organ\genitals.dm"
 #include "code/datums/components/movedirtying.dm"
+#include "code\modules\mob\living\carbon\human\species_types\sissean\_sissean.dm"
+#include "code\modules\client\customizer\customizers\organ\frills.dm"
+#include "code\modules\surgery\organs\frills.dm"
 // END_INCLUDE

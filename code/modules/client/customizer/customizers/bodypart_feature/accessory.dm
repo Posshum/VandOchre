@@ -57,3 +57,21 @@
 		/datum/sprite_accessory/accessories/eyepierce,
 		/datum/sprite_accessory/accessories/eyepierce/alt,
 	)
+
+/datum/customizer/bodypart_feature/underwear
+	name = "Underwear"
+	customizer_choices = list(/datum/customizer_choice/bodypart_feature/underwear)
+	allows_disabling = TRUE
+	default_disabled = TRUE
+
+/datum/customizer_choice/bodypart_feature/underwear
+	name = "Underwear"
+	feature_type = /datum/bodypart_feature/underwear
+	allows_accessory_color_customization = TRUE
+	sprite_accessories = list(
+		/datum/sprite_accessory/underwear/briefs,
+		/datum/sprite_accessory/underwear/panties,
+		/datum/sprite_accessory/underwear/bikini,
+		/datum/sprite_accessory/underwear/leotard,
+		/datum/sprite_accessory/underwear/loincloth
+		)

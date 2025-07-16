@@ -12,6 +12,7 @@
 #define RACE_HOLLOWKIN "Hollow-Kin"
 #define RACE_HARPY "Harpy"
 #define RACE_TRITON "Triton"
+#define RACE_SISSEAN "Sissean"
 #define RACE_HUMAN_SPACE "Human"
 
 // ============ USING ID BECAUSE FUCK YOU
@@ -31,6 +32,7 @@
 	"kobold",\
 	"triton",\
 	"humanspace",\
+	"sissean",\
 	)
 
 /// Species where females get underwear, no underwear for kobold, rakshari and triton, dwarves handled seperately
@@ -77,6 +79,7 @@
 	RACE_KOBOLD,\
 	RACE_HOLLOWKIN,\
 	RACE_HALF_ORC,\
+	RACE_SISSEAN,\
 )
 
 /// Species not considered discriminated against in Vanderlin. Used for nobility, etc.
@@ -98,6 +101,7 @@
 	RACE_HALF_ELF,\
 	RACE_HARPY,\
 	RACE_TRITON,\
+	RACE_SISSEAN,\
 )
 
 /// Species who are non-exotic to Vanderlin. These are species from foreign lands with no local pull or uncommon species. Used in miscellaneous cases, when they would not be that role.
@@ -112,6 +116,7 @@
 	RACE_TIEFLING,\
 	RACE_HARPY,\
 	RACE_TRITON,\
+	RACE_SISSEAN,\
 	RACE_HOLLOWKIN,\
 	RACE_HALF_ORC,\
 )
@@ -169,6 +174,7 @@
 	RACE_HARPY,\
 	RACE_RAKSHARI,\
 	RACE_TRITON,\
+	RACE_SISSEAN,\
 )
 
 /// Foreigner Nobility Species - No Tiefling (you know why) or hollow-kin
@@ -184,6 +190,7 @@
 	RACE_HARPY,\
 	RACE_RAKSHARI,\
 	RACE_TRITON,\
+	RACE_SISSEAN,\
 	RACE_KOBOLD,\
 )
 

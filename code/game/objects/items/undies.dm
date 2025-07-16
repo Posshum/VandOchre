@@ -10,6 +10,7 @@
 	max_integrity = 200
 	integrity_failure = 0.1
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
+	var/datum/bodypart_feature/underwear/undies_feature
 	var/gendered = MALE
 	var/race
 	var/cached_undies

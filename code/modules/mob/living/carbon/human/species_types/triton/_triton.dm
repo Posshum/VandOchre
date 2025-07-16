@@ -30,9 +30,6 @@
 	males of this species are more likely to pursue magick with their weaker frames compared to their stronger female counterparts."
 
 	possible_ages = NORMAL_AGES_LIST
-
-	skin_tone_wording = "Tribal Identity"
-	default_color = "9cc2e2"
 	use_skintones = FALSE
 
 	species_traits = list(MUTCOLORS, NO_UNDERWEAR, HAIR, OLDGREY)
@@ -126,6 +123,7 @@
 		/datum/customizer/bodypart_feature/hair/head/humanoid/triton,
 		/datum/customizer/bodypart_feature/accessory,
 		/datum/customizer/bodypart_feature/face_detail,
+		/datum/customizer/bodypart_feature/underwear,
 		/datum/customizer/organ/penis/lizard,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/belly/human,

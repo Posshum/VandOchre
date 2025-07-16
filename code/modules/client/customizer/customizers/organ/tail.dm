@@ -127,3 +127,20 @@
 		/datum/sprite_accessory/tail/kobold,
 		/datum/sprite_accessory/tail/kobold/alt,
 		)
+
+/obj/item/organ/tail/sissean
+	accessory_type = /datum/sprite_accessory/tail/lizard
+
+/datum/customizer/organ/tail/sissean
+	customizer_choices = list(/datum/customizer_choice/organ/tail/sissean)
+	allows_disabling = FALSE
+
+/datum/customizer_choice/organ/tail/sissean
+	name = "Sissean Tail"
+	organ_type = /obj/item/organ/tail/sissean
+	allows_accessory_color_customization = FALSE
+	sprite_accessories = list(
+		/datum/sprite_accessory/tail/lizard,
+		/datum/sprite_accessory/tail/lizard/smooth,
+		/datum/sprite_accessory/tail/lizard/spikes,
+		)
